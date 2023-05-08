@@ -25,14 +25,6 @@ client.on("ready", async () => {
 
   await commandManager.create(
     new SlashCommandBuilder()
-      .setName("run")
-      .setDescription("Place status embed")
-      .setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages),
-    guildId
-  );
-
-  await commandManager.create(
-    new SlashCommandBuilder()
       .setName("ping")
       .setDescription(
         "Get the current latency of the bot's connection to the Discord server."
