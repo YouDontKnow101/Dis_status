@@ -1,0 +1,12 @@
+commandManager.fetch({ force: true })
+  .then(commands => {
+    const command = commands.find(cmd => cmd.name === 'run');  //Change this
+    if (command) {
+      commandManager.delete(command.id)
+        .then(() => console.log('Command deleted'))
+        .catch(console.error);
+    } else {
+      console.log('Command not found.');
+    }
+  })
+  .catch(console.error);
