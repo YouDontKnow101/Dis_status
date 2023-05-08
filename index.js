@@ -16,7 +16,7 @@ const client = new Client({
     GatewayIntentBits.GuildMembers,
   ],
 });
-const guildId = config.guildId;
+const guildId = null;
 const discordToken = config.discordToken;
 
 client.on("ready", async () => {
